@@ -27,7 +27,7 @@
             </div>
             <!--Main-->
             <!--10 so it fills the rest of the page-->
-            <div class="col-md-10 main p-0">
+            <div class="col-md-10 main">
             <!--I want nav to stay at the top so going to use navbar-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 rounded shadow-sm">
                 <div class="container-fluid">
@@ -37,7 +37,7 @@
                     </form>
                     <!--dropdown-->
                     <div class="dropdown">
-                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
                             <i class="fas fa-user me-2"></i>Admin
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -54,17 +54,125 @@
             <div class="row mb-4">
                 <!--start at colum 3-->
                 <div class="col-md-3">
-                    <div class="card borderLeft ms-3">
+                    <div class="card ms-3" style="border-left: 15px solid #14a44d;">
                         <div class="card-body">
                             <h6 class="card-title">Active Players</h6>
                             <h2>2,500</h2>
+                            <p class="text-success mt-3"><i class="fas fa-arrow-up me-1"></i>17% Increase </p>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-md-3">
+                    <div class="card ms-3" style="border-left: 15px solid #3b71ca;">
+                        <div class="card-body">
+                            <h6 class="card-title">Server Load</h6>
+                            <h2>67%</h2>
+                            <!--TRYING SOMETHING-->
+                            <div class="progress">
+                                <div class="progress-bar pBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----->
+                <div class="col-md-3">
+                    <div class="card ms-3" style="border-left: 15px solid teal;">
+                        <div class="card-body">
+                            <h6 class="card-title">Active Servers</h6>
+                            <h2>8/10</h2>
+                            <p class="text-success">All system operational</p>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-md-3">
+                    <div class="card ms-3" style="border-left: 15px solid #E4A11B;">
+                        <div class="card-body">
+                            <h6 class="card-title">Reports</h6>
+                            <h2>25</h2>
+                            <p class="text-warning">5 Require attention</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!----Server Status Table--->
+            <div class="card mb-4">
+                <!---header style-->
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Server Status</h5>
+                </div>
 
-            </div>            
+                <div class="card-body">
+                    <!---causes the table to shrink-->
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Server Name</th>
+                                    <th>Status</th>
+                                    <th>Players</th>
+                                    <th>Region</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EU-West #1</td>
+                                    <!--status-indicator make green light icon-->
+                                    <td class="text-success">Online</td>
+                                    <td class="text-success">245/300</td>
+                                    <td>Europe</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary me-1">Manage</button>
+                                        <button class="btn btn-sm btn-danger">Restart</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>US-East #1</td>
+                                    <td class="text-success">Online</td>
+                                    <td class="text-warning">178/300</td>
+                                    <td>North America</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary me-1">Manage</button>
+                                        <button class="btn btn-sm btn-danger">Restart</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ASIA-1</td>
+                                    <td class="text-danger">Offline</td>
+                                    <td class="text-danger">0/300</td>
+                                    <td>Asia</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary me-1">Manage</button>
+                                        <button class="btn btn-sm btn-success">Start</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </div>
+                <!----->
+                <div class="card mt-5">
+                    <!----would just used margin-left so much better-->
+                    <div class="card-header d-flex justify-content-between">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <button class="btn btn-sm btn-primary">View All</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table">
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-exclamation-triangle bg-danger me-2 p-2"></i><b class="text-warning">Server Crash ASIA-1!</b></td>
+                                </tr>
+                            </tbody>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                      
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
